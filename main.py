@@ -1,8 +1,8 @@
 # Mendeklarasikan Variabel dan Konstanta
 MAX_COURSES = 3
-pilih = ""
-nambah = "1"
-penuh = False
+pilih = "" # Untuk menampung nomer kursus yang akan dipilih
+nambah = "1" # Untuk opsi apakah pengguna ingin daftar kursus lain
+penuh = False 
 myCourses = [] # Untuk menampung kursus yang telah didaftar
 
 # Deklarasi Fungsi
@@ -15,7 +15,7 @@ def isNumberValid(value):
 
     return False
 
-# Fungsi untuk mengambil data kursus
+# Fungsi untuk mengambil data kursus(list kursus atau kursus yang sudah didaftar) berdasarkan nomor 
 def getCourses(course, id):
     for i in course:
         if i['id'] == id:
@@ -23,7 +23,7 @@ def getCourses(course, id):
 
     return None
 
-# Fungsu untuk mengecek kesamaan waktu
+# Fungsi untuk mengecek apakah ada kesamaan waktu
 def checkIfSameTime(time):
     for i in myCourses:
         if i['waktu'] == time:
@@ -99,10 +99,14 @@ for i in courses:
 
 # Menggunakan loop agar pengguna bisa mendaftar lebih dari satu kursus
 while nambah == "1" :
+
     penuh = False
+
+    # Validasi agar nomor kursus yang dimasukkan sesuai dengan ketentuan
     while pilih.isdigit() == False or isNumberValid(int(pilih)) == False:
         pilih = input("Masukkan nomor kursus yang ingin diikuti!\n")
 
+        # Apabila ketentuan sudah terpenuhi, maka tidak perlu memberi peringatan
         if(pilih.isdigit() == True and isNumberValid(int(pilih)) == True):
             break
 
