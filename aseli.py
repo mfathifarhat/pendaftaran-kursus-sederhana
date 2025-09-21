@@ -1,4 +1,11 @@
-# kuota kursus 
+# judul kursus
+kursus1 = "Basic Python"
+kursus2 = "Basic C++"
+kursus3 = "Basic Java"
+kursus4 = "Basic PHP"
+kursus5 = "Basic JS"
+kursus6 = "Basic Laravel"
+# kuota kursus
 kuota1 = 11
 kuota2 = 13  
 kuota3 = 1  
@@ -35,12 +42,14 @@ while kapasitas <= 3:
     # menampilkan kursus yang tersedia
     print("\nKursus yang tersedia:")
     print(f"=========================================================")
-    print(f"1. Basic Python     | Kuota: {kuota1} | Jadwal: {jadwal1}") 
-    print(f"2. Basic C++        | Kuota: {kuota2} | Jadwal: {jadwal2}")
-    print(f"3. Basic Java       | Kuota: {kuota3} | Jadwal: {jadwal3}")
-    print(f"4. Basic PHP        | Kuota: {kuota4} | Jadwal: {jadwal4}")
-    print(f"5. Basic JS         | Kuota: {kuota5} | Jadwal: {jadwal5}")
-    print(f"6. Basic Laravel    | Kuota: {kuota6} | Jadwal: {jadwal6}")
+    print(f"1. Kursus   :{kursus1} {"(Sudah didaftar)" if user1 != "" and user1 in kursus1 or user2 != "" and user2 in kursus1 else '(Tersedia)'}"
+          f"   Kuota    : {kuota1}"
+          f"   Jadwal   : {jadwal1}")
+    print(f"2. {kursus2}     | Kuota: {kuota2} | Jadwal: {jadwal2} {"(Sudah didaftar)" if user1 != "" and user1 in kursus2 or user2 != "" and user2 in kursus2 else '(Tersedia)'}")
+    print(f"3. {kursus3}     | Kuota: {kuota3} | Jadwal: {jadwal3} {"(Sudah didaftar)" if user1 != "" and user1 in kursus3 or user2 != "" and user2 in kursus3 else '(Tersedia)'}")
+    print(f"4. {kursus4}     | Kuota: {kuota4} | Jadwal: {jadwal4} {"(Sudah didaftar)" if user1 != "" and user1 in kursus4 or user2 != "" and user2 in kursus4 else '(Tersedia)'}")
+    print(f"5. {kursus5}     | Kuota: {kuota5} | Jadwal: {jadwal5} {"(Sudah didaftar)" if user1 != "" and user1 in kursus5 or user2 != "" and user2 in kursus5 else '(Tersedia)'}")
+    print(f"6. {kursus6}     | Kuota: {kuota6} | Jadwal: {jadwal6} {"(Sudah didaftar)" if user1 != "" and user1 in kursus5 or user2 != "" and user2 in kursus6 else '(Tersedia)'}")
     print(f"=========================================================")
     
     # memasukan nomor kursus atau berhenti
@@ -128,4 +137,4 @@ if user3 != "": print(f"- {user3} ({jadwal_user3})")
 print("\n==========================================")
 
 # Salam penutup kepada pengguna
-print("Terima kasih sudah berkunjung di kursus kami! Sampai jumpa kembali! ヾ(≧▽≦*)o")
+print("Terima kasih sudah berkunjung! Sampai jumpa kembali! ヾ(≧▽≦*)o")
