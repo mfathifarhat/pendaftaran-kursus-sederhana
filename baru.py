@@ -165,7 +165,7 @@ Kuota   : {kuota5}""")
             break
         case _: # Validasi apabila masukkan pengguna tidak sesuai
             berhasil = False
-            message = "Silahkan masukkan nomor kursus atau 'n' jika anda tidak ingin mendaftar!"
+            message = "Kursus tidak ditemukan!"
 
     if berhasil == False: # Menampilkan pesan apabila pendaftaran gagal
         print(message)
